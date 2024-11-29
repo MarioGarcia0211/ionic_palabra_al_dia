@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>jugar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" color="light">
+
+  <div class="medio">
+    <ion-list [inset]="true">
+      <ion-item lines="full">
+        <ion-input label="Jugador:" value="{{nombre}}"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list [inset]="true">
+      <ion-item>
+        <ion-input label="Nivel de dificultad:" [value]="nivel.name"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="juego">
+    <app-fila *ngFor="let item of numfilas; let i = index" [palabra]="palabra" [letras]="letras"
+      [activa]="i === filaActiva" (filaAdivinada)="onFilaAdivinada($event)">
+    </app-fila>
+  </div>
+
+
+
+</ion-content>

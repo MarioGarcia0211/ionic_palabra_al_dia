@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resultado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>{{ mensaje }}</h2>
+  <p>Aciertos: {{ aciertos }}</p>
+  <p>Coincidencias: {{ coincidencias }}</p>
+  <p>Fallos: {{ fallos }}</p>
+  <ion-button expand="full" (click)="irHome()">Volver al inicio</ion-button>
+</ion-content>

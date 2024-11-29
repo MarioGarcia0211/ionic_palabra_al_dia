@@ -1,0 +1,12 @@
+<app-celda *ngFor="let item of letras" 
+           [letra]="item" 
+           [palabra]="palabra"
+           [activa]="activa"
+           (letraCambiada)="onLetraCambiada($event)">
+</app-celda>
+<!-- *ngFor="let item of letras": Directiva Angular que repite el elemento <app-celda> para cada item en el array letras -->
+<!-- item: Representa una letra individual en el array letras -->
+<!-- [letra]="item": Pasa la letra actual (item) como entrada al componente CeldaComponent -->
+<!-- [palabra]="palabra": Pasa la palabra completa como entrada al componente CeldaComponent -->
+<!-- [activa]="activa": Pasa el estado de activación (si la fila está activa) como entrada al componente CeldaComponent -->
+<!-- (letraCambiada)="onLetraCambiada($event)": Vincula el evento letraCambiada emitido por el componente CeldaComponent al método onLetraCambiada($event) en el componente FilaComponent -->

@@ -1,0 +1,33 @@
+ion-input.custom {
+    --background: #ffffff;
+    --color: #000;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+  
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+  
+    border: 1px solid #000;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: 0;
+    font-size: xx-large;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  
+  ion-input.verde {
+    --background: #0a640a;
+    --color: #ffffff;
+  }
+  ion-input.naranja {
+    --background: #c87303;
+    --color: #ffffff;
+  }
+  ion-input.gris {
+    --background: #767676;
+    --color: #ffffff;
+  }

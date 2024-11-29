@@ -1,0 +1,17 @@
+<ion-item>
+  <ion-input
+    class="custom"
+    [ngClass]="{'verde': css === 'acierto', 'naranja': css === 'casi', 'gris': css === 'fallo' }"
+    [maxlength]="1"
+    (keyup)="onComprobar()"
+    [(ngModel)]="opcion"
+    [disabled]="!activa"
+  ></ion-input>
+</ion-item>
+
+<!-- class="custom": Aplica una clase CSS personalizada llamada custom al campo de entrada -->
+<!-- [ngClass]="{'verde': css === 'acierto', 'naranja': css === 'casi', 'gris': css === 'fallo' }": Aplica clases CSS dinámicamente en función del valor de css. Si css es 'acierto', aplica la clase verde; si es 'casi', aplica la clase naranja; y si es 'fallo', aplica la clase gris -->
+<!-- [maxlength]="1": Limita el campo de entrada a un solo carácter -->
+<!-- (keyup)="onComprobar()": Llama al método onComprobar() cada vez que se presiona una tecla en el campo de entrada -->
+<!-- [(ngModel)]="opcion": Enlaza el valor del campo de entrada con la propiedad opcion del componente -->
+<!-- [disabled]="!activa": Deshabilita el campo de entrada si la propiedad activa es false -->

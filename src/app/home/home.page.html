@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="uppercase-title">La palabra del dia</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding" color="light">
+
+
+
+  <div class="medio">
+    <h1>Bienvenidos</h1>
+
+    <div class="itemes">
+      <ion-list [inset]="true">
+        <ion-item lines="full">
+          <!-- Un campo de entrada con etiqueta "Jugador:" que usa ngModel para enlazar el valor con la variable jugador en el componente -->
+          <ion-input label="Jugador:" [(ngModel)]="jugador" placeholder="Digite el nombre del jugador"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list [inset]="true">
+        <ion-item>
+          <!-- Un campo de selección con etiqueta "Dificultad:" que usa ngModel para enlazar el valor con la variable nivel  -->
+          <ion-select label="Dificultad:" [(ngModel)]="nivel" placeholder="Elija el nivel de dificultad">
+            <!-- Opciones del campo de selección generadas dinámicamente usando *ngFor para iterar sobre opciones -->
+            <ion-select-option *ngFor="let item of opciones" [value]="item.id">{{item.name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="btnes">
+      <!-- Un botón para comenzar el juego. Está deshabilitado (disabled) si jugador o nivel no están definidos. Al hacer clic, llama al método comenzarJuego pasando el nivel seleccionado. -->
+      <ion-button expand="block" [disabled]="!jugador || !nivel" (click)="comenzarJuego(nivel)">Comenzar Juego</ion-button>
+      <br>
+      <!-- Un botón para ver los récords del juego. Al hacer clic, llama al método records. -->
+      <!-- <ion-button color="success" expand="block" (click)="records()">Records</ion-button> -->
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="uppercase-title">Records</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding" color="light">
+
+  <ion-list>
+    <ion-item lines="full" *ngFor="let item of clasificacion; let i = index" >
+      <ion-card>
+        <ion-card-content>
+          <ion-label><strong>N°: </strong>{{i + 1}}</ion-label>
+          <ion-label><strong>Jugador: </strong>{{item.jugador}}</ion-label>
+          <ion-label><strong>Dificultad: </strong>{{item.dificultad}}</ion-label>
+          <ion-label><strong>Tiempo: </strong>{{item.tiempo}} segundos</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
